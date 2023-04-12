@@ -11,9 +11,14 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class SplashActivity extends AppCompatActivity {
 
     private static int SPLASH_SCREEN_TIMEOUT =2000;
+
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -32,13 +37,21 @@ public class SplashActivity extends AppCompatActivity {
         ImageView imageView=findViewById(R.id.imageView);
         imageView.setAnimation(fadeout);
 
+        mAuth = FirebaseAuth.getInstance();
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
-                startActivity(intent);
-                finish();
-
+                if(mAuth.getCurrentUser()!=null){
+                    Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+                else {
+                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         }, SPLASH_SCREEN_TIMEOUT);
     }
