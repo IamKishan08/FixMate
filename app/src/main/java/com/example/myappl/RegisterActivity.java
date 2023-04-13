@@ -121,11 +121,26 @@ public class RegisterActivity extends AppCompatActivity {
                 final String conPasswordTxt = conpassword.getText().toString();
 
 
+//                String email = emailTxt.getText().toString().trim();
+
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+// onClick of button perform this simplest code.
+                if (emailTxt.matches(emailPattern))
+                {
+//                    Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
+                }
                 // check if user fill all the fields before sending data to firebase
                 if(fullnameTxt.isEmpty() || emailTxt.isEmpty() || phoneTxt.isEmpty() || passwordTxt.isEmpty()){
                     Toast.makeText(RegisterActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+
 
                 // check if passwords are matching with each other
                 //  if not matching with each other then show a toast messsage
@@ -160,6 +175,10 @@ public class RegisterActivity extends AppCompatActivity {
                                                    }
                                                 }
                                             });
+                                }
+                                else {
+                                    Toast.makeText(getApplicationContext(),"Email id already exist",Toast.LENGTH_SHORT).show();
+
                                 }
                             }
                         });

@@ -7,7 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.InputType;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -90,10 +92,26 @@ public class LoginActivity extends AppCompatActivity {
                 final String email = usernameET.getText().toString();
                 final String passwordTxt = passwordET.getText().toString();
 
+
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+                if (email.matches(emailPattern))
+                {
+//                    Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
+
+                }
+
                 if(email.isEmpty() || passwordTxt.isEmpty()){
                     Toast.makeText(LoginActivity.this, "Please enter your mobile or password", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+
+
 
                 mAuth.signInWithEmailAndPassword(email,passwordTxt)
                                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -104,9 +122,13 @@ public class LoginActivity extends AppCompatActivity {
                                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                             startActivity(intent);
                                     }
+                                        else {
+                                            Toast.makeText(getApplicationContext(),"Invalid Credential ",Toast.LENGTH_SHORT).show();
+//
+                                        }
                                     }
                                 });
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+//                startActivity(new Intent(LoginActivity.this, MainActivity.class));
             }
         });
 
