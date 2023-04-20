@@ -2,12 +2,10 @@ package com.example.myappl;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        Button logoutBtn = findViewById(R.id.button);
+
         final LinearLayout homeLayout = findViewById(R.id.homeLayout);
         final LinearLayout likeLayout = findViewById(R.id.likeLayout);
         final LinearLayout notificationLayout = findViewById(R.id.notificationLayout);
@@ -43,12 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Logout Button working
-        logoutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                logout();
-            }
-        });
 
        // Bottom Layout
 
@@ -76,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
                     notificationTxt.setVisibility(View.GONE);
                     profileTxt.setVisibility(View.GONE);
 
-                    likeImage.setImageResource(R.drawable.like_icon);
-                    notificationImage.setImageResource(R.drawable.notification_icon);
+                    likeImage.setImageResource(R.drawable.baseline_shopping_cart_24);
+                    notificationImage.setImageResource(R.drawable.baseline_engineering_24);
                     profileImage.setImageResource(R.drawable.profile_icon);
 
                     likeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -111,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     // set like fragment
                     getSupportFragmentManager().beginTransaction()
                             .setReorderingAllowed(true)
-                            .replace(R.id.fragmentContainer, LikesFragments.class, null)
+                            .replace(R.id.fragmentContainer, CartFragments.class, null)
                             .commit();
 
                     // unselect other tabs expect like tab
@@ -120,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                     profileTxt.setVisibility(View.GONE);
 
                     homeImage.setImageResource(R.drawable.home_icon);
-                    notificationImage.setImageResource(R.drawable.notification_icon);
+                    notificationImage.setImageResource(R.drawable.baseline_engineering_24);
                     profileImage.setImageResource(R.drawable.profile_icon);
 
                     homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -129,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 
                     // select home tab
                     likeTxt.setVisibility(View.VISIBLE);
-                    likeImage.setImageResource(R.drawable.like_selected_icon);
+                    likeImage.setImageResource(R.drawable.baseline_shopping_cart_24);
                     likeLayout.setBackgroundResource(R.drawable.round_back_like_100);
 
                     // create animation
@@ -154,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                     // set notification fragment
                     getSupportFragmentManager().beginTransaction()
                             .setReorderingAllowed(true)
-                            .replace(R.id.fragmentContainer, NotificationFragment.class, null)
+                            .replace(R.id.fragmentContainer, ServiceFragment.class, null)
                             .commit();
 
                     // unselect other tabs expect notification tab
@@ -163,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                     profileTxt.setVisibility(View.GONE);
 
                     homeImage.setImageResource(R.drawable.home_icon);
-                    likeImage.setImageResource(R.drawable.like_icon);
+                    likeImage.setImageResource(R.drawable.baseline_shopping_cart_24);
                     profileImage.setImageResource(R.drawable.profile_icon);
 
                     homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -172,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
 
                     // select home tab
                     notificationTxt.setVisibility(View.VISIBLE);
-                    notificationImage.setImageResource(R.drawable.notification_selected_icon);
+                    notificationImage.setImageResource(R.drawable.baseline_engineering_24);
                     notificationLayout.setBackgroundResource(R.drawable.round_back_notification_100);
 
                     // create animation
@@ -207,8 +199,8 @@ public class MainActivity extends AppCompatActivity {
                     notificationTxt.setVisibility(View.GONE);
 
                     homeImage.setImageResource(R.drawable.home_icon);
-                    likeImage.setImageResource(R.drawable.like_icon);
-                    notificationImage.setImageResource(R.drawable.notification_icon);
+                    likeImage.setImageResource(R.drawable.baseline_shopping_cart_24);
+                    notificationImage.setImageResource(R.drawable.baseline_engineering_24);
 
                     homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
                     likeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -233,11 +225,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void logout(){
-        mAuth.signOut();
-        startActivity(new Intent(MainActivity.this, LoginActivity.class));
-        finish();
-    }
+
 
 }
 

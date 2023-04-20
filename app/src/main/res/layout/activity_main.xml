@@ -6,23 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Main Dashboard"
-        android:gravity="center"
-        android:foregroundGravity="center"
-         />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
-        android:text="Logout"
-        android:gravity="center"
-        android:foregroundGravity="center"/>
+
 
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
