@@ -7,7 +7,14 @@
     android:background="@color/home"
     android:orientation="vertical"
     tools:context=".HomeFragment">
-
+   <ScrollView
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       >
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
 
     <com.denzcoskun.imageslider.ImageSlider
 
@@ -21,11 +28,63 @@
         app:iss_corner_radius="20"
         app:iss_text_align="CENTER">
 
+
+
     </com.denzcoskun.imageslider.ImageSlider>
 
 
+       <RelativeLayout
+           android:id="@+id/searchView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/search_bar_background">
+
+           <EditText
+               android:id="@+id/searchEditText"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="8dp"
+               android:layout_marginTop="8dp"
+               android:layout_marginBottom="8dp"
+               android:hint="Search"
+               android:textColor="@color/search_bar_text_color"
+               android:background="@drawable/search_bar_bg"
+               android:drawableStart="@drawable/search_ic"
+               android:drawablePadding="8dp"
+               android:imeOptions="actionSearch"/>
+
+       </RelativeLayout>
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Categories"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           android:padding="16dp"/>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/categoryRecyclerView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Popular Services"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           android:padding="16dp"/>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/popularServicesRecyclerView"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
 
 
-
+   </LinearLayout>
+   </ScrollView>
 
 </RelativeLayout>
