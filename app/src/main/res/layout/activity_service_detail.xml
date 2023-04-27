@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ServiceDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="65dp">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="65dp">
+
+        <!-- Service image -->
+        <ImageView
+            android:id="@+id/serviceImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:padding="58dp"
+
+            android:src="@drawable/cleaningfeature"
+            android:scaleType="centerCrop"/>
+
+        <!-- Service name -->
+        <TextView
+            android:id="@+id/serviceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cleaning"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- Service provider name -->
+        <TextView
+            android:id="@+id/serviceProviderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Provider"
+            android:textSize="18sp"
+            android:textColor="@color/dark_gray"/>
+
+        <!-- Service price and time -->
+
+        <!--Title-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service Description"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Service description -->
+        <TextView
+            android:id="@+id/serviceDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our cleaning service provides a deep cleaning of your home, including dusting, vacuuming, mopping, and more. We use eco-friendly products and ensure a clean and fresh living space for you."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:paddingTop="8dp"
+            android:justificationMode="inter_word"
+            android:paddingBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service Provider Details"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Service provider details -->
+        <TextView
+            android:id="@+id/serviceProviderDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our cleaning team is experienced and professional, ensuring that every corner of your home is spotless. We offer flexible scheduling and affordable rates to fit your needs. Contact us today for a cleaner home tomorrow!"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:justificationMode="inter_word"
+            android:paddingBottom="16dp"/>
+
+
+
+        <!-- Book this service button -->
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bookButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book this service"
+        android:background="@drawable/round_back_primary_15"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:padding="1dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true" />
+
+
+
+</RelativeLayout>

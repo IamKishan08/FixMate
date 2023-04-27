@@ -1,35 +1,49 @@
 package com.example.myappl.domain;
 
-public class LocalService {
+import java.io.Serializable;
+
+public class LocalService implements Serializable {
     private String name;
-    private String description;
-    private String cost;
-    private String timing;
+   // private String description;
+
+    private String provider;
+
     private int imageResource;
 
-    public LocalService(String name, String description, String cost, String timing, int imageResource) {
+    private String servicedetail;
+
+    private String providerdetail;
+
+
+
+    public LocalService(String name, String provider, String servicedetail, String providerdetail, int imageResource) {
         this.name = name;
-        this.description = description;
-        this.cost = cost;
-        this.timing = timing;
+        //this.description = description;
         this.imageResource = imageResource;
+        this.provider = provider;
+
+
+        this.servicedetail = servicedetail;
+        this.providerdetail = providerdetail;
+
+
+
     }
 
     public String getName() {
         return name;
     }
 
-    public String getDescription() {
-        return description;
+
+   public String getProvider() {
+       return provider;
+   }
+
+    public String getServicedetail() {
+        return servicedetail;
     }
 
-    public String getCost() {
-        return cost;
-    }
-
-    public String getTiming() {
-        return timing;
-    }
+    public String getProviderdetail() {return providerdetail;}
 
     public int getImageResource() {
         return imageResource;

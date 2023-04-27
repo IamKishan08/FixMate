@@ -1,19 +1,27 @@
 package com.example.myappl;
 
-public class PopularService {
+import java.io.Serializable;
+
+public class PopularService implements Serializable {
 
         private String name;
         private String provider;
-        private String cost;
-        private String timing;
+       // private String cost;
+       // private String timing;
         private int image;
 
-        public PopularService(String name, String provider, String cost, String timing, int image) {
+        private String servicedetail;
+
+        private String providerdetail;
+
+        public PopularService(String name, String provider, int image, String servicedetail, String providerdetail) {
             this.name = name;
-            this.provider = provider;
-            this.cost = cost;
-            this.timing = timing;
             this.image = image;
+            this.provider = provider;
+
+
+            this.servicedetail = servicedetail;
+            this.providerdetail = providerdetail;
         }
 
         public String getName() {
@@ -24,17 +32,16 @@ public class PopularService {
             return provider;
         }
 
-        public String getCost() {
-            return cost;
-        }
-
-        public String getTiming() {
-            return timing;
-        }
 
         public int getImage() {
             return image;
         }
+
+        public String getServicedetail() {
+        return servicedetail;
+    }
+
+        public String getProviderdetail() {return providerdetail;}
 
 
 }

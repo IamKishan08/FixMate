@@ -29,13 +29,13 @@ public class SplashActivity extends AppCompatActivity {
 
         setContentView(R.layout.splash_activity);
 
-        Animation fadeout = new AlphaAnimation(1, 0);
-        fadeout.setInterpolator(new AccelerateInterpolator());
-        fadeout.setStartOffset(500);
-        fadeout.setDuration(1800);
+//        Animation fadeout = new AlphaAnimation(1, 0);
+//        fadeout.setInterpolator(new AccelerateInterpolator());
+//        fadeout.setStartOffset(500);
+//        fadeout.setDuration(1800);
 
-        ImageView imageView=findViewById(R.id.imageView);
-        imageView.setAnimation(fadeout);
+//        ImageView imageView=findViewById(R.id.imageView);
+//        imageView.setAnimation(fadeout);
 
         mAuth = FirebaseAuth.getInstance();
 

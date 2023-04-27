@@ -81,6 +81,7 @@
 
                 <!-- Dark Mode / Night Mode-->
                 <RelativeLayout
+                    android:id="@+id/MyBookingsBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -88,11 +89,12 @@
                         android:layout_width="40dp"
                         android:id="@+id/BookingIcon"
                         android:layout_height="40dp"
-                        android:src="@drawable/bookings_icon"
+                        android:src="@drawable/booking_icon"
                         android:background="@drawable/round_back_night_mode"
                         android:padding="12dp"/>
 
                     <TextView
+
                         android:layout_marginStart="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

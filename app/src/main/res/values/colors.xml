@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#ECE6E6</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
+    <color name="purple_500">#FD9295</color>
+
+    <!--add phone color-->
+    <color name="purple_700">#FD9295</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#808080</color>
+    <color name="dark_gray">#A9A9A9</color>
+    <color name="green">#00FF00</color>
+
 
     <color name="primary">#01AED8</color>
     <color name="secondary">#FF03DAC5</color>
 
-    <color name="home">#FFFFFFFF</color>
-    <color name="like">#FFFFFFFF</color>
-    <color name="notification">#FFFFFFFF</color>
-    <color name="profile">#D3D3D3</color>
+    <color name="home">#FFf3e6</color>
+    <color name="like">#FFECE1</color>
+    <color name="notification">#FFECE1</color>
+    <color name="profile">#FFECE1</color>
 
-    <color name="home_20">#335B37B7</color>
-    <color name="like_20">#335B37B7</color>
-    <color name="notification_20">#335B37B7</color>
-    <color name="profile_20">#335B37B7</color>
+    <color name="home_20">#FF6A6F</color>
+    <color name="like_20">#FF6A6F</color>
+    <color name="notification_20">#FF6A6F</color>
+    <color name="profile_20">#FF6A6F</color>
 
-    <color name="night_mode">#6124B1</color>
+    <color name="night_mode">#03A9F4</color>
     <color name="notifications">#13B2C3</color>
     <color name="private_account">#E6A326</color>
     <color name="security">#D95F69</color>
 
 
-    <color name="search_bar_background">#F2F2F2</color>
+    <color name="search_bar_background">#FFECE1</color>
     <color name="search_bar_text_color">#333333</color>
     <color name="search_bar_border_color">#CCCCCC</color>
 </resources>

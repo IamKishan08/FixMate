@@ -28,7 +28,7 @@
         android:paddingBottom="15dp"
         android:elevation="10dp"
         android:gravity="center"
-        android:background="#FFFFFF"
+        android:background="#FDB1B4"
         android:layout_alignParentBottom="true"
         tools:targetApi="lollipop">
 
@@ -79,14 +79,14 @@
                 android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:src="@drawable/baseline_shopping_cart_24"/>
+                android:src="@drawable/booking_icon"/>
 
             <TextView
                 android:id="@+id/likeTxt"
                 android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Order"
+                android:text="Bookings"
                 android:textStyle="bold"
                 android:textColor="@color/like"
                 android:layout_marginStart="10dp"

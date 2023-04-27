@@ -1,5 +1,7 @@
 package com.example.myappl;
 
+import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,8 +33,22 @@ public class PopularServicesAdapter extends RecyclerView.Adapter<PopularServices
         holder.serviceImageView.setImageResource(service.getImage());
         holder.serviceNameTextView.setText(service.getName());
         holder.serviceProviderTextView.setText(service.getProvider());
-        holder.serviceCostTextView.setText(service.getCost());
-        holder.serviceTimingTextView.setText(service.getTiming());
+
+
+
+
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), ServiceDetailActivity.class);
+                intent.putExtra("service", service);
+                intent.putExtra("from","popularservice");
+                view.getContext().startActivity(intent);
+            }
+        });
+
     }
 
 
@@ -45,16 +61,13 @@ public class PopularServicesAdapter extends RecyclerView.Adapter<PopularServices
         ImageView serviceImageView;
         TextView serviceNameTextView;
         TextView serviceProviderTextView;
-        TextView serviceCostTextView;
-        TextView serviceTimingTextView;
+
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             serviceImageView = itemView.findViewById(R.id.serviceImageView);
             serviceNameTextView = itemView.findViewById(R.id.serviceNameTextView);
             serviceProviderTextView = itemView.findViewById(R.id.serviceProviderTextView);
-            serviceCostTextView = itemView.findViewById(R.id.serviceCostTextView);
-            serviceTimingTextView = itemView.findViewById(R.id.serviceTimingTextView);
 
         }
     }

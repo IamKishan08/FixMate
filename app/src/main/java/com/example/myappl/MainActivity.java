@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                     notificationTxt.setVisibility(View.GONE);
                     profileTxt.setVisibility(View.GONE);
 
-                    likeImage.setImageResource(R.drawable.baseline_shopping_cart_24);
+                    likeImage.setImageResource(R.drawable.booking_icon);
                     notificationImage.setImageResource(R.drawable.baseline_engineering_24);
                     profileImage.setImageResource(R.drawable.profile_icon);
 
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 
                     // select home tab
                     likeTxt.setVisibility(View.VISIBLE);
-                    likeImage.setImageResource(R.drawable.baseline_shopping_cart_24);
+                    likeImage.setImageResource(R.drawable.booking_icon);
                     likeLayout.setBackgroundResource(R.drawable.round_back_like_100);
 
                     // create animation
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                     profileTxt.setVisibility(View.GONE);
 
                     homeImage.setImageResource(R.drawable.home_icon);
-                    likeImage.setImageResource(R.drawable.baseline_shopping_cart_24);
+                    likeImage.setImageResource(R.drawable.booking_icon);
                     profileImage.setImageResource(R.drawable.profile_icon);
 
                     homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
                     notificationTxt.setVisibility(View.GONE);
 
                     homeImage.setImageResource(R.drawable.home_icon);
-                    likeImage.setImageResource(R.drawable.baseline_shopping_cart_24);
+                    likeImage.setImageResource(R.drawable.booking_icon);
                     notificationImage.setImageResource(R.drawable.baseline_engineering_24);
 
                     homeLayout.setBackgroundColor(getResources().getColor(android.R.color.transparent));

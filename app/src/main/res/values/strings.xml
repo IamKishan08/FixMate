@@ -1,3 +1,39 @@
 <resources>
-    <string name="app_name">MyAppl</string>
+    <string name="app_name">FixMate</string>
+
+    <string name="user_address">Address:</string>
+    <string name="time_slot">Preferred Time Slot:</string>
+    <string name="time_slot_1">6:00 AM - 10:00 PM</string>
+    <string name="time_slot_2">10:00 PM - 04:00 PM</string>
+    <string name="time_slot_3">04:00 PM - 10:00 PM</string>
+    <string name="time_slot_4">Anytime</string>
+
+
+    <string name="building_hint">Building Name/No.</string>
+    <string name="street_hint">Street/Area</string>
+    <string name="locality_hint">Locality</string>
+    <string name="state_hint">State</string>
+    <string name="country_hint">Country</string>
+    <string name="pincode_hint">Pincode</string>
+    <string name="phone_hint">Phone Number</string>
+    <string name="problem_description_title">Problem Details</string>
+    <string name="problem_description_hint">What is your Problem?</string>
+
+
+    //MyBookings
+    <string name="my_bookings">My Bookings</string>
+    <string name="no_bookings">No bookings found</string>
+    <string name="booking_date">Booking Date:</string>
+    <string name="booking_time">Booking Time:</string>
+    <string name="booking_service">Service:</string>
+    <string name="booking_provider">Provider:</string>
+    <string name="booking_cost">Cost:</string>
+    <string name="booking_status">Status:</string>
+
+    <!-- ConfirmationActivity string resources -->
+    <string name="confirmation_message">Your order is confirmed. Please wait for the service provider to respond.</string>
+    <string name="confirm_order">Confirm order</string>
+
+
+
 </resources>
