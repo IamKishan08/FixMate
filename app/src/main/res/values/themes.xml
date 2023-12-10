@@ -17,7 +17,7 @@
 
     <style name="Theme.MyAppl1" parent="Theme.MaterialComponents.Light.NoActionBar">
 
-        <item name="android:windowBackground">@drawable/splashimage</item>
+        <item name="android:windowBackground">@drawable/splashimagefix</item>
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>

@@ -74,7 +74,7 @@ public class BookingActivity extends AppCompatActivity {
                     selectedTimeSlot = selectedRadioButton.getText().toString();
                 }
 
-                // Do something with the selected time slot
+                // Do something with the selecte+d time slot
                 // For example, you could store it in a variable or display it in a TextView
             }
         });

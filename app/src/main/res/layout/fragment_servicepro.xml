@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/notification"
+    tools:context=".ServiceFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top app bar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FD9295"
+            app:menu="@menu/menu_dashboard"
+            app:title="Dashboard"
+            app:titleTextColor="@color/black" />
+
+        <!-- Main content area -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Welcome message -->
+                <TextView
+                    android:id="@+id/welcome_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome"
+                    android:textSize="24sp" />
+
+                <!-- Service provider stats -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/total_jobs_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Jobs :"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/total_jobs_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 0"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#D95F69"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"/>
+
+                    <TextView
+                        android:id="@+id/earnings_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Earnings :"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/earnings_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Available jobs -->
+                <TextView
+                    android:id="@+id/available_jobs_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Available Jobs"
+                    android:textSize="18sp" />
+
+                <ListView
+                    android:id="@+id/available_jobs_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/view_requests_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/round_back_primary_15"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:padding="1dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="View Requests" />
+
+            <Button
+                android:id="@+id/complete_requests_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/round_back_primary_15"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:padding="1dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="Complete Requests" />
+
+            <Button
+                android:id="@+id/view_history_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/round_back_primary_15"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:padding="1dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="View History" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</FrameLayout>

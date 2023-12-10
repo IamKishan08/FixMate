@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ChatActivity">
+
+    <ListView
+        android:id="@+id/list_view_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_chatbox"
+        android:divider="@null"
+        android:stackFromBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/layout_chatbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/edit_text_message"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_toLeftOf="@+id/button_send"
+            android:layout_toStartOf="@+id/button_send"
+            android:hint="Type a message..."
+            android:maxLines="3"
+            android:minLines="1"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Send" />
+    </RelativeLayout>
+
+</RelativeLayout>

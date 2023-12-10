@@ -34,6 +34,8 @@
     <string name="confirmation_message">Your order is confirmed. Please wait for the service provider to respond.</string>
     <string name="confirm_order">Confirm order</string>
 
+    <string name="action_notifications">Notifications</string>
+    <string name="action_settings">Settings</string>
 
 
 </resources>

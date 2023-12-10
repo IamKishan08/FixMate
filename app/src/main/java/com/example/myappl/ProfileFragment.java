@@ -21,6 +21,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myappl.account.AccountActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -38,17 +39,10 @@ import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 public class ProfileFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
 
     FirebaseAuth mAuth;
-    public ProfileFragment() {
-        // Required empty public constructor
-    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +63,8 @@ public class ProfileFragment extends Fragment {
         // Find the button in the layout
         LinearLayout signOutButton = view.findViewById(R.id.logOutBtn);
         RelativeLayout MyBookingsButton = view.findViewById(R.id.MyBookingsBtn);
+        RelativeLayout ChatBtn = view.findViewById(R.id.chatBtn);
+        RelativeLayout accountBtn = view.findViewById(R.id.accountBtn);
 
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -122,7 +118,7 @@ public class ProfileFragment extends Fragment {
                 });
 
 
-
+        //Click Buttons
 
        MyBookingsButton.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -131,6 +127,25 @@ public class ProfileFragment extends Fragment {
                startActivity(intent);
            }
        });
+
+
+       ChatBtn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent intent = new Intent(getActivity(),ChatActivity.class);
+               startActivity(intent);
+           }
+       });
+
+       accountBtn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent intent = new Intent(getActivity(), AccountActivity.class);
+               startActivity(intent);
+           }
+       });
+
+
 
 
 

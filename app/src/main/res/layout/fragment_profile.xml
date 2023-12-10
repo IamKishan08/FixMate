@@ -9,12 +9,13 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
+    android:background="@color/profile"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#FD9295">
 
         <ImageView
             android:layout_width="50dp"
@@ -109,6 +110,7 @@
 
                 <!-- Notifications-->
                 <RelativeLayout
+                    android:id="@+id/chatBtn"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -174,6 +176,7 @@
 
                 <!-- Security -->
                 <RelativeLayout
+                    android:id="@+id/accountBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
